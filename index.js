@@ -26,6 +26,13 @@ async function run() {
             const category = await categoriesCollection.find(query).toArray();
             res.send(category);
         })
+
+
+        app.get('/category/:catId', async (req, res) => {
+            const { catId } = req.params;
+            const category = await phonesCollection.find({ category_Id: catId }).toArray();
+            res.send(category);
+        })
     }
     finally {
 
