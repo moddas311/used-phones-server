@@ -1,0 +1,83 @@
+[
+    {
+        "category_Id": "1",
+        "img": "https://i.ibb.co/hcc4dXx/314548581-6041370192541049-3764892062631028447-n.jpg",
+        "name": "iPhone xs 64GB",
+        "location": "Farmgate",
+        "sell price": "31900",
+        "used": "1.7 Years",
+        "posted date": "11/26/22"
+    },
+    {
+        "category_Id": "1",
+        "img": "https://i.ibb.co/TKKKSwT/307387289-5588958874528806-7739313807656771320-n.jpg",
+        "name": "iPhone 7 32GB",
+        "location": "Merol Badda",
+        "sell price": "12400",
+        "used": "2.2 Years",
+        "posted date": "10/11/22"
+    },
+    {
+        "category_Id": "1",
+        "img": "https://i.ibb.co/rw7NqyC/314840627-6427328860627413-6157209056848864571-n.jpg",
+        "name": "iPhone 12 Pro Max 256GB",
+        "location": "Jatrabari",
+        "sell price": "120000",
+        "used": "8 Months",
+        "posted date": "15/11/22"
+    },
+    {
+        "category_Id": "2",
+        "img": "https://i.ibb.co/jvD4RvB/310211106-5344302319002635-2921428144466398705-n.jpg",
+        "name": "Samsung A31 64GB",
+        "location": "Rampura",
+        "sell price": "17600",
+        "used": "1 Year",
+        "posted date": "10/10/22"
+    },
+    {
+        "category_Id": "2",
+        "img": "https://i.ibb.co/G3GGpSW/313490109-5619765881478808-1217408145791599738-n.jpg",
+        "name": "Samsung A70 128GB",
+        "location": "Malibag",
+        "sell price": "14500",
+        "used": "3 Years",
+        "posted date": "29/10/22"
+    },
+    {
+        "category_Id": "2",
+        "img": "https://i.ibb.co/SxR9D8X/306875240-5957122754352503-5190578809570339233-n.jpg",
+        "name": "Samsung S7 Edge 32GB",
+        "location": "Haterjheel",
+        "sell price": "8500",
+        "used": "3.9 Years",
+        "posted date": "24/10/22"
+    },
+    {
+        "category_Id": "3",
+        "img": "https://i.ibb.co/fS7V7K0/316025874-5647362535309665-6912165183002176018-n.jpg",
+        "name": "One Plus 9R 256GB",
+        "location": "Dhanmondi 32",
+        "sell price": "32600",
+        "used": "1 Year",
+        "posted date": "05/11/22"
+    },
+    {
+        "category_Id": "3",
+        "img": "https://i.ibb.co/DgbjgfZ/316331486-5856803131043485-1119927399476614512-n.jpg",
+        "name": "One Plus 9RT 128GB",
+        "location": "Gulsan",
+        "sell price": "31900",
+        "used": "1.9 Years",
+        "posted date": "22/11/22"
+    },
+    {
+        "category_Id": "3",
+        "img": "https://i.ibb.co/sgFyTRn/310778211-5498775913511286-3611932231959540282-n.jpg",
+        "name": "One Plus 6 64GB",
+        "location": "Mowakhali",
+        "sell price": "6500",
+        "used": "4 Years",
+        "posted date": "09/10/22"
+    }
+]
