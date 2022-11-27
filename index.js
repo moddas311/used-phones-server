@@ -24,8 +24,9 @@ async function run() {
 
         app.get('/category', async (req, res) => {
             const query = {};
-            const category = await categoriesCollection.find(query).toArray();
-            res.send(category);
+            const categories = await categoriesCollection.find(query).toArray();
+
+            res.send(categories);
         })
 
 
@@ -37,9 +38,15 @@ async function run() {
 
         app.post('/bookings', async (req, res) => {
             const booking = req.body;
-            console.log(booking);
             const result = await bookingsCollection.insertOne(booking);
             res.send(result);
+        })
+
+        app.get('/bookings', async (req, res) => {
+            const email = req.query.email;
+            const query = { email: email };
+            const bookings = await bookingsCollection.find(query).toArray();
+            res.send(bookings);
         })
     }
     finally {
