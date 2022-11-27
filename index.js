@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
-require('dotenv').config()
+require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 5000;
 
@@ -19,6 +19,7 @@ async function run() {
     try {
         const categoriesCollection = client.db('usedPhone').collection('category');
         const phonesCollection = client.db('usedPhone').collection('usedPhones');
+        const bookingsCollection = client.db('usedPhone').collection('bookings')
 
 
         app.get('/category', async (req, res) => {
@@ -32,6 +33,13 @@ async function run() {
             const { catId } = req.params;
             const category = await phonesCollection.find({ category_Id: catId }).toArray();
             res.send(category);
+        })
+
+        app.post('/bookings', async (req, res) => {
+            const booking = req.body;
+            console.log(booking);
+            const result = await bookingsCollection.insertOne(booking);
+            res.send(result);
         })
     }
     finally {
