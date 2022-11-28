@@ -55,6 +55,12 @@ async function run() {
             res.send(category);
         });
 
+        app.post('/usedPhones', async (req, res) => {
+            const phone = req.body;
+            const result = await phonesCollection.insertOne(phone);
+            res.send(result);
+        })
+
         app.post('/bookings', async (req, res) => {
             const booking = req.body;
             const result = await bookingsCollection.insertOne(booking);
@@ -87,7 +93,14 @@ async function run() {
         });
 
         app.get('/users', async (req, res) => {
-            const query = {};
+            const type = req.query.type;
+            let query = {};
+            if (type === "buyer") {
+                query = { role: "Buyer" }
+            }
+            if (type === "seller") {
+                query = { role: "Seller" }
+            }
             const users = await usersCollection.find(query).toArray();
             res.send(users);
         });
@@ -118,12 +131,20 @@ async function run() {
             const result = await usersCollection.updateOne(filter, updatedDoc, options);
             res.send(result);
         });
-        app.get('/users/Buyer/:id', async (req, res) => {
-            const id = req.params.id;
-            const query = { _id: ObjectId(id) };
-            const result = await usersCollection.find(query).toArray();
-            res.send(result);
-        })
+
+        app.get('/users/admin/:email', async (req, res) => {
+            const email = req.params.email;
+            const query = { email };
+            const user = await usersCollection.findOne(query);
+            res.send({ isAdmin: user?.role === 'admin' })
+        });
+
+        app.get('/users/Seller/:email', async (req, res) => {
+            const email = req.params.email;
+            const query = { email };
+            const user = await usersCollection.findOne(query);
+            res.send({ isSeller: user?.role === 'Seller' })
+        });
     }
     finally {
 
