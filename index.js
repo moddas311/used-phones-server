@@ -59,6 +59,13 @@ async function run() {
             const phone = req.body;
             const result = await phonesCollection.insertOne(phone);
             res.send(result);
+        });
+
+        app.get('/usedPhones', async (req, res) => {
+            const email = req.query.email;
+            const query = { email: email };
+            const result = await phonesCollection.find(query).toArray();
+            res.send(result);
         })
 
         app.post('/bookings', async (req, res) => {
